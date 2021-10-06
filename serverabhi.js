@@ -9,8 +9,9 @@ app.get('/',(req,res) =>{
 
 })
 
-const PORT = 3000
+console.log.apply(`heroku port number is ${process.env.PORT }`)
+const prt = process.env.PORT || 3000;
 
-app.listen(PORT, () =>{
+app.listen(prt, () =>{
     console.log(`server started at port ${PORT}`)
 })
